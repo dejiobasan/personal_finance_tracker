@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_finance_tracker/screens/signup_screen.dart';
+import 'package:personal_finance_tracker/screens/login_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,9 +16,7 @@ class HomeScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.blue[500],
               image: DecorationImage(
-                image: AssetImage(
-                  'assets/images/Shape.png',
-                ),
+                image: AssetImage('assets/images/Shape.png'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -60,28 +60,32 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            customBlue950,
-                        foregroundColor:
-                            Colors
-                                .white,
+                        backgroundColor: customBlue950,
+                        foregroundColor: Colors.white,
                       ),
                       onPressed: () {
-                        
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignUpScreen(),
+                          ),
+                        );
                       },
                       child: Text('Register'),
                     ),
                     SizedBox(width: 20),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor:
-                            customBlue950,
-                        foregroundColor:
-                            Colors
-                                .white,
+                        backgroundColor: customBlue950,
+                        foregroundColor: Colors.white,
                       ),
                       onPressed: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginScreen(),
+                          ),
+                        );
                       },
                       child: Text('Login'),
                     ),

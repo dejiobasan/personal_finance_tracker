@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_finance_tracker/screens/signup_screen.dart';
 import 'package:personal_finance_tracker/screens/login_screen.dart';
+import 'package:personal_finance_tracker/widgets/custom_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -58,11 +59,10 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: customBlue950,
-                        foregroundColor: Colors.white,
-                      ),
+                    CustomButton(
+                      text: 'Register',
+                      color: customBlue950,
+                      width: 100,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -71,14 +71,12 @@ class HomeScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text('Register'),
                     ),
                     SizedBox(width: 20),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: customBlue950,
-                        foregroundColor: Colors.white,
-                      ),
+                    CustomButton(
+                      text: 'Login',
+                      color: customBlue950,
+                      width: 100,
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -87,7 +85,6 @@ class HomeScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text('Login'),
                     ),
                   ],
                 ),

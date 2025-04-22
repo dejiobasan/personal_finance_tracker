@@ -3,6 +3,7 @@ import 'package:personal_finance_tracker/screens/home_screen.dart';
 import 'package:personal_finance_tracker/screens/login_screen.dart';
 import 'package:personal_finance_tracker/widgets/custom_button.dart';
 
+
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
   static const Color customButtonColor = Color(0xff2563eb);
@@ -12,18 +13,18 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.blue[500], // Background color
+          color: Colors.blue[500],
           image: const DecorationImage(
             image: AssetImage('assets/images/Shape.png'),
-            fit: BoxFit.cover, // Adjust the image to cover the background
+            fit: BoxFit.cover,
           ),
         ),
         child: Center(
           child: Container(
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
-              color: Colors.white, // Modal background color
-              borderRadius: BorderRadius.circular(16.0), // Rounded corners
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16.0),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black26,
@@ -32,7 +33,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ],
             ),
-            width: MediaQuery.of(context).size.width * 0.4, // Modal width
+            width: MediaQuery.of(context).size.width * 0.4,
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,

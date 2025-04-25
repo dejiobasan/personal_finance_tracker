@@ -37,7 +37,6 @@ class _LoginScreenState extends State<LoginScreen> {
         User? user = userCredential.user;
         if (user != null) {
           if (user.emailVerified) {
-            // Email is verified, navigate to the home screen
             Fluttertoast.showToast(
               msg: "Login successful!",
               toastLength: Toast.LENGTH_SHORT,
@@ -52,7 +51,6 @@ class _LoginScreenState extends State<LoginScreen> {
               MaterialPageRoute(builder: (context) => const DashboardScreen()),
             );
           } else {
-            // Email is not verified, show an error message
             setState(() {
               _errorMessage =
                   'Please verify your email address before logging in.';
